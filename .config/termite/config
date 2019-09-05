@@ -1,3 +1,6 @@
+[options]
+font = Inconsolata 16
+
 [colors]
 # Base16 Bright
 # Author: Chris Kempson (http://chriskempson.com)
