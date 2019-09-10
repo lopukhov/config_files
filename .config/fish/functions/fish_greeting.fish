@@ -1,4 +1,3 @@
 function fish_greeting
-	echo
-	neofetch
+	screenfetch
 end
