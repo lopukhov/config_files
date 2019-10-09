@@ -16,6 +16,9 @@ Plug 'deoplete-plugins/deoplete-jedi'
 " Plug 'racer-rust/vim-racer'
 " Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
+" NeoMake
+Plug 'neomake/neomake'
+
 " Targets
 Plug 'wellle/targets.vim'
 
@@ -109,6 +112,9 @@ set nobackup			" Donot keep a file~ as a backup
 " Deoplete.
 let g:deoplete#enable_at_startup = 1
 inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" NeoMake
+call neomake#configure#automake('nw', 750)
 
 " Rainbow
 let g:rainbow_active = 1
