@@ -22,9 +22,6 @@ Plug 'neomake/neomake'
 " Targets
 Plug 'wellle/targets.vim'
 
-" Auto-Pairs
-Plug 'jiangmiao/auto-pairs'
-
 " Surround
 Plug 'tpope/vim-surround'
 
