@@ -11,19 +11,22 @@ filetype off                  " required
 call plug#begin("~/.config/nvim/bundle")
 
 " Deoplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-jedi'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'deoplete-plugins/deoplete-jedi'
 " Plug 'racer-rust/vim-racer'
 " Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " NeoMake
-Plug 'neomake/neomake'
+" Plug 'neomake/neomake'
 
 " Targets
-Plug 'wellle/targets.vim'
+" Plug 'wellle/targets.vim'
 
 " Surround
-Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-surround'
+
+" Highlight Yanked Text
+Plug 'machakann/vim-highlightedyank'
 
 " Commentary
 Plug 'tpope/vim-commentary'
