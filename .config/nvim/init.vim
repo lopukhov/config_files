@@ -1,5 +1,5 @@
 " Set 'nocompatible' to ward off unexpected things that your distro might
-" have made, as well as sanely reset options when re-sourcing .vimrc
+" have made, as well as sanely reset options when re-sourcing init.vim
 " It must be the first instruction.
 set nocompatible
 
@@ -71,15 +71,21 @@ set foldnestmax=3
 " ----------------------------------------------------------------------------------------
 
 " UI Configuration
-set number              " show line numbers
-set relativenumber		" show relative number
-set showcmd             " show command in bottom bar
-set cursorline          " highlight current line
+set number              	" Show line numbers
+set relativenumber			" Show relative number
+set showcmd             	" Show command in bottom bar
+set cursorline          	" Highlight current line
 
-set ruler				" Display the cursor position on the last line of the screen
-set wildmenu            " visual autocomplete for command men
-set showmatch           " highlight matching [{()}]
-set showmode			" show insert/replace/visual mode
+set ruler					" Display the cursor position on the last line of the screen
+set wildmenu            	" Visual autocomplete for command men
+set showmatch           	" highlight matching [{()}]
+set showmode				" Show insert/replace/visual mode
+
+set nowrap					" Do not wrap lines
+
+set wildmenu				" Decent wildmenu
+set wildmode=list:longest	" Decent wildmenu
+set wildignore=.hg,.svn,*~,*.png,*.jpg,*.gif,*.settings,Thumbs.db,*.min.js,*.swp,publish/*,intermediate/*,*.o,*.hi,Zend,vendor
 
 " ----------------------------------------------------------------------------------------
 
@@ -92,15 +98,40 @@ set fileencoding=utf-8	" encoding used when saving file
 " Searching
 set ignorecase			" Use case insensitive search, except when using capital letters
 set smartcase
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
+set incsearch           " Search as characters are entered
+set hlsearch            " Highlight matches
+set inccommand=nosplit	" Show the operation to be executed in :
+
+" ----------------------------------------------------------------------------------------
+
+" Sane Remaps
+
+" Search
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+
+" Move in line with home keys
+map H ^
+map L $
+
+" No arrow keys
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
+
+" Left and right can switch buffers
+nnoremap <Left> gt
+nnoremap <Right> gT
 
 " ----------------------------------------------------------------------------------------
 
 " Misc
-set mouse=a				" Enable use of the mouse for all modes
-set confirm				" raise a dialogue asking if you wish to save changed files
-set nobackup			" Donot keep a file~ as a backup
+set mouse=a							" Enable use of the mouse for all modes
+set confirm							" raise a dialogue asking if you wish to save changed files
+set nobackup						" Donot keep a file~ as a backup
+set undodir=~/.config/nvim/vimdid	" Undo after closing file
+set undofile						" Undo after closing file
 
 " ----------------------------------------------------------------------------------------
 
