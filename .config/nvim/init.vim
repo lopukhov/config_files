@@ -10,14 +10,20 @@ filetype off                  " required
 
 call plug#begin("~/.config/nvim/bundle")
 
+" Semantic language support
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Deoplete
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'deoplete-plugins/deoplete-jedi'
-" Plug 'racer-rust/vim-racer'
-" Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " NeoMake
 " Plug 'neomake/neomake'
+
+" Fuzzy finder
+" Plug 'airblade/vim-rooter'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
 
 " Targets
 " Plug 'wellle/targets.vim'
@@ -36,6 +42,12 @@ Plug 'airblade/vim-gitgutter'
 
 " Rainbow
 Plug 'luochen1990/rainbow'
+
+" Syntactic language support
+Plug 'cespare/vim-toml'
+Plug 'stephpy/vim-yaml'
+Plug 'rust-lang/rust.vim'
+Plug 'dag/vim-fish'
 
 call plug#end()            " required
 
@@ -141,14 +153,19 @@ set undofile						" Undo after closing file
 " Plugins configurations
 
 " Deoplete.
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" let g:deoplete#enable_at_startup = 1
+" inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " NeoMake
-call neomake#configure#automake('nw', 750)
+" call neomake#configure#automake('nw', 750)
 
 " Rainbow
 let g:rainbow_active = 1
+
+" Rust
+let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
+let g:rustfmt_fail_silently = 0
 
 " ----------------------------------------------------------------------------------------
 
