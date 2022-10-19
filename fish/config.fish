@@ -8,3 +8,5 @@ set -l name (hostname | grep -Eo 'toolbox')
 if test "$name" = "toolbox"
 	set fish_private_mode true
 end
+
+zoxide init fish | source
